@@ -1,0 +1,52 @@
+/* style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(to bottom, #2e004f, #04061f);
+    font-family: 'Cursive', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #ffd1fa;
+    margin-bottom: 1rem;  
+  }
+  
+  .countdown {
+    margin: 1.5rem 0; 
+    padding: 1rem;
+    border: 1px solid #ffb3ff; 
+    border-radius: 10px; 
+    background: rgba(255, 255, 255, 0.05); 
+  }
+  
+  #time-count, #countdown-until {
+    font-size: 1.4rem; 
+    margin: 0.5rem 0; 
+  }
+  
+  .message {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    color: #d4d4ff;
+  }
+  

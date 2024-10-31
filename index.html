@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contagem de Tempo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Para Minha Amada Larissa</h1>
+    <div class="countdown">
+      <p id="time-count"></p>
+      <p id="countdown-until"></p>
+    </div>
+    <p class="message">Você é a razão dos meus sorrisos e o amor que ilumina meus dias. Cada segundo ao seu lado é uma bênção, e a contagem é apenas um lembrete do quanto você é especial para mim.</p>
+  </div>
+
+  <script>
+    const startDate = new Date("2024-10-01T00:00:00"); 
+    const endDate = new Date("2024-12-09T00:00:00"); 
+
+    const timeCountElement = document.getElementById("time-count");
+    const countdownUntilElement = document.getElementById("countdown-until");
+
+    function updateCounters() {
+      const now = new Date();
+      const timeDiff = now - startDate;
+      const futureDiff = endDate - now;
+
+      // Contador de tempo
+      const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      timeCountElement.textContent = `Estamos juntos há ${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos!`;
+
+      const futureDays = Math.floor(futureDiff / (1000 * 60 * 60 * 24));
+      const futureHours = Math.floor((futureDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const futureMinutes = Math.floor((futureDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const futureSeconds = Math.floor((futureDiff % (1000 * 60)) / 1000);
+
+      countdownUntilElement.textContent = `Faltam ${futureDays} dias, ${futureHours} horas, ${futureMinutes} minutos e ${futureSeconds} segundos para estarmos juntos!`;
+    }
+
+    updateCounters();
+    setInterval(updateCounters, 1000); 
+  </script>
+</body>
+</html>
